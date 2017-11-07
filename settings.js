@@ -1,16 +1,16 @@
 $(document).ready( function () {
 	var uploader = new qq.FineUploaderBasic ({
-		button					: document.getElementById ( "upload-btn" ),
+		button		: document.getElementById ( "upload-btn" ),
 		maxConnections	: 3,
-		multiple				: true,
-		validation		: {
-			acceptedFiles				: ".jpeg,.jpg,.png,.rar,.zip",
-			allowedExtensions		: ["jpeg", "jpg", "png", "rar", "zip"],
-			sizeLimit						: 1000000000, // 1 GB
+		multiple	: true,
+		validation	: {
+			acceptedFiles		: ".jpeg,.jpg,.png,.rar,.zip",
+			allowedExtensions	: ["jpeg", "jpg", "png", "rar", "zip"],
+			sizeLimit		: 1000000000, // 1 GB
 			stopOnFirstInvalidFile	: true
 		},
 		request			: {
-			endpoint			: "uploader.cfc?method=upload",
+			endpoint	: "uploader.cfc?method=upload",
 			filenameParam	: "fileUP" // name of method argument receiving the file
 		},
 		chunking		: {
